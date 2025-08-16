@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T0法抗</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #000000;
+            color: white;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 0 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .nav-item {
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-item.active {
+            background-color: #a40d27;
+            border-left: 4px solid #a40d27;
+        }
+
+        .content-area {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            max-width: calc(100% - 250px);
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+            margin-bottom: 50px;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .content-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .content-section p {
+            line-height: 1.6;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 10px 0;
+                max-height: 120px;
+            }
+
+            .sidebar h2 {
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+            }
+
+            .nav-items {
+                display: flex;
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
+
+            .nav-item {
+                flex: 0 0 auto;
+                padding: 10px 15px;
+                border-left: none;
+                border-bottom: 4px solid transparent;
+            }
+
+            .nav-item.active {
+                border-left: none;
+                border-bottom: 4px solid #2980b9;
+            }
+
+            .content-area {
+                padding: 20px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>导航菜单</h2>
+        <div class="nav-items"></div>
+    </div>
+
+    <div class="content-area">
+        <div class="content-section" data-title="女子2年与5人办婚礼骗上百万彩礼">
+            <h2>女子2年与5人办婚礼骗上百万彩礼</h2>
+            <p>2018年2月至2019年10月，安徽28岁女子苏某某与5名男子交叉相亲并分别举办了婚礼，收取见面礼、订亲礼、彩礼等费用达到上百万元。5名男子中，苏某某仅和其中1名男子领取结婚证，不到1年便离了婚。其中两名男子的婚礼，相隔仅仅1周。8月14日，记者从中国裁判文书网获悉了这样一起案件，一审法院以诈骗罪，判处被告人苏某某有期徒刑十一年。苏某某提出上诉后，近日，二审法院裁定：驳回上诉，维持原判。
+
+                据二审刑事裁定书显示，苏某某系1997年出生，高中文化，无业，住安徽省怀远县。2023年8月9日因涉嫌诈骗罪被怀远县公安局取保候审，2024年8月20日被怀远县公安局刑事拘留，同年9月26日经怀远县人民检察院批准逮捕，同日被怀远县公安局执行逮捕。
+
+                一审法院曾认定，2018年1月，苏某某经徐某某介绍与男子刘某相亲，2018年2月23日举办婚礼，刘某为了和苏某某结婚前后花费共计27万余元。此后，苏某某以各种理由推脱和刘某见面，最终苏某某退还18万元彩礼，刘某家直接损失9万多元。
+
+            </p><p>   2018年初，苏某某经徐某某介绍与温某相亲，2018年2月27日举办婚礼，温某一家人为了迎娶苏某某先后给付苏某某订亲礼、彩礼、三金费用共计27万余元。结婚三天后，苏某某便回门离开了温某，再次以各种理由不与温某见面。经多次讨要，苏某某退赔温某家12万元彩礼，温某家直接损失15万多元。
+
+            </p><p>     2019年1月4日、2019年2月13日，苏某某经徐某某、陈某介绍分别与易某、周某相亲后举办了婚礼。婚礼后，苏某某同样以各种理由离开了易某、周某。其中，易某家为了迎娶苏某某前后花费共计20多万元，虽大部分已经追回，但易某仍损失约7万元；周某为了和苏某某结婚，前后在订婚宴、中秋节、约定婚期、婚礼期间给了苏某某20多万元，苏某某仅退还了周某10万元钱，周某为了和苏某某结婚损失达十多万元。
+
+            </p><p>     2019年夏，苏某某经徐某某等人介绍又与徐某相亲，2019年9月9日双方登记结婚，2019年10月份举办了婚礼。徐某家为了迎娶苏某某先后给付苏某某见面礼、订亲礼、彩礼等共计30万余元。苏某某与徐某结婚不到一个月后便离开徐某家，2019年年底苏某某无故以各种理由要求和徐某离婚。2019年年底徐某父亲重病，徐某为了不影响自己的父亲便被迫答应与苏某某离婚，二人于2020年6月1日办理离婚。苏某某未退还徐某家任何礼金，徐某家直接损失达三十万余元。
+
+            </p><p>     徐某陈述，离婚的时候曾要求苏某某退还彩礼，但苏某某不愿意退，称如果硬让她退彩礼的话，就要到家里闹。当时徐某的父亲正生病，徐某怕影响到父亲，所以就不敢和苏某某提退还彩礼的事情了。
+
+                根据刘某、温某、易某、周某、徐某的陈述，苏某某只和徐某办理了结婚证，与其他四人举办婚礼后，以各种理由推脱办理结婚证。
+
+            </p><p>     一审法院认为，被告人苏某某以非法占有为目的，虚构事实、隐瞒真相，骗取他人财物，数额特别巨大，其行为构成诈骗罪。对于被告人部分退赃，可酌情从轻处罚。一审法院判处被告人苏某某有期徒刑十一年，并处罚金人民币二十万元，剥夺政治权利二年；责令被告人苏某某退赔被害人相关经济损失。
+
+            </p><p>     一审宣判后，苏某某不服，提出上诉。其当庭陈述称，诈骗行为系其同胞姐姐田婉婉所为。
+
+                在二审刑事裁定书“被告人的供述与辩解”部分，记者看到，苏某某说，在礼钱这一块，她只拿订婚礼和彩礼，媒人得他们的媒人礼钱，基本上媒人每次都能拿到一万到两万块钱。她基本上没有得到什么钱。她和刘某、温某、易某、周某、徐某五个人都举行了婚礼，这都是男方家要求的，她才这样做的，她是不想相亲、不想结婚的，但是受徐某某等人的蒙蔽，所以不这样做不行。她之前在公安机关所做的有罪供述有一些不对的地方，之前她的双胞胎姐姐田婉婉曾顶替她和刘某、温某、易某、徐某结的婚，她只和周某举办了婚礼。她不清楚田婉婉的具体信息。
+
+            </p><p>     二审法院审理查明的事实同一审法院一致。二审法院安徽省蚌埠市中级人民法院认为，上诉人苏某某以非法占有为目的，虚构事实，隐瞒真相，通过与他人相亲、缔结婚姻等手段索取彩礼，骗取他人财物，数额特别巨大，其行为构成诈骗罪。
+
+                对于苏某某陈述的“诈骗行为系其同胞姐姐田婉婉所为”，二审法院查明，针对此情形侦查机关在一审时已出具情况说明，侦查机关通过调查上诉人的户籍档案，且通过照片对比，未发现上诉人所称的名叫田婉婉的信息，且本案的相关被害人、证人等均未提到田婉婉的相关信息。
+
+            </p><p>     二审法院驳回了苏某某的上诉，维持了原判。</p>
+        </div>
+
+        <div class="content-section" data-title="女子将醉酒男友踹下河致其溺亡，判处过失杀人5年半">
+            <h2>女子将醉酒男友踹下河致其溺亡，判处过失杀人5年半</h2>
+            <p>聚餐后男子买了几瓶酒在河边祭祀其父，女方两次劝说无果，揣其背部致其落水。法院认得女方主观上不存在犯罪动机，判处5年半。检察院抗诉后又撤回抗诉。</p>
+            <img src="./img/女子将醉酒男友踹下河致其溺亡/-7Q1ah-en5aZfT3cShs-134.jpg">
+            <img src="./img/女子将醉酒男友踹下河致其溺亡/-7Q1ah-fewvZdT1kShs-134.jpg">
+        </div>
+
+        <div class="content-section" data-title="87岁著名书画家被娇妻卷走20亿">
+            <h2>87岁著名书画家被娇妻卷走20亿</h2>
+            <img src="./img/87岁著名书画家被娇妻卷走20亿/-7Q1ah-5qfvZfT1kShs-12j.jpg">
+            <img src="./img/87岁著名书画家被娇妻卷走20亿/-7Q1ah-5sj7ZcT1kShs-12j.jpg">
+        </div>
+
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contentSections = document.querySelectorAll('.content-section');
+            const navContainer = document.querySelector('.nav-items');
+            
+            contentSections.forEach((section, index) => {
+                const title = section.getAttribute('data-title');
+                
+                const navItem = document.createElement('div');
+                navItem.className = 'nav-item';
+                navItem.textContent = title;
+                if (index === 0) {
+                    navItem.classList.add('active');
+                    section.classList.add('active');
+                }
+                
+                navItem.addEventListener('click', () => {
+                    document.querySelectorAll('.nav-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    navItem.classList.add('active');
+                    
+                    contentSections.forEach(sec => {
+                        sec.classList.remove('active');
+                    });
+                    section.classList.add('active');
+                    
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                navContainer.appendChild(navItem);
+            });
+        });
+    </script>
+</body>
+</html>
